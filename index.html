@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Geomatry Genious</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <!-- header saction -->
+  <header class="container">
+    <nav class="navbar bg-body-tertiary mt-2">
+      <div class="container-fluid">
+        <a class="navbar-brand"><span class="fs-2 fw-bold">Interactive </span><br> <span>Geometry Genius</span></a>
+        
+        <form class="d-flex" role="search">
+          <a class="btn btn-success" type="submit" href="question.html" >Blog</a>
+        </form>
+      </div>
+    </nav>
+</header>
+<!-- main section -->
+<main class="container ">
+<section>
+  <div class="row justify-content-center m-5 ">
+    <div class="col-md-8">
+   
+      <div class="row row-cols-1 row-cols-md-3 g-2">
+        <div class="col">
+          <div class="card h-100  "  >
+            <div class="card-body">
+               <img src="images/triangle.png" class="card-img-top" alt="...">
+              <h5 class="card-title text-center pt-3 fw-bold" id="triangle-name">Triangle</h5>
+              <p class="fs-6 text-center">Area (A) = 0.5 X b X h</p>
+
+              <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="b" id="Triangleinput-b"><span class="input-group-text" id="inputGroup-sizing-sm">cm</span>
+             </div>
+              <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="h" id="Triangleinput-h"><span class="input-group-text" id="inputGroup-sizing-sm">cm</span>
+             </div>
+
+
+
+
+
+            </div>
+            
+              <button class="btn btn-primary w-100 rounded-3 my-3" type="button" id="triangle-btn">Calculate</button>
+           
+
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 "  onmouseenter="setRandomColor() " >
+            
+            <div class="card-body">
+              <img src="images/rectangle.png" class="card-img-top" alt="...">
+              <h5 class="card-title text-center pt-5 fw-bold" id="Rectangle-text">Rectangle</h5>
+              <p class="fs-6 text-center">Area (A) = W X l</p>
+<div class="input-group input-group-sm mb-3">
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="w" id="Rectangleinput-w"><span class="input-group-text" id="inputGroup-sizing-sm">cm</span>
+           </div>
+           <div class="input-group input-group-sm ">
+              <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" placeholder="l" id="Rectangleinput-l" ><span class="input-group-text" id="inputGroup-sizing-sm">cm</span></div>
+
+            </div>
+            
+              <button class="btn btn-primary w-100 rounded-3 my-3 px-2" type="button" id="Rectangle-btn">Calculate</button>
+
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 p-1" onmouseenter="setRandomColor() " >
+              <div class="card-body pt-4">
+                  <img src="images/parallelogram.png" class="card-img-top" alt="...">
+        
+              <h5 class="card-title text-center fw-bold pt-5" id="parallelogram-text">Parallelogram</h5>
+              <p class="fs-6 text-center">Area (A) = b X h</p>
+
+             <p class="text-center">b=10cm, h=12cm</p>
+            </div>
+            
+              <button class="btn btn-primary w-100 rounded-3 my-3" type="button" id="parallelogram-btn">Calculate</button>
+
+          </div>
+        </div>
+        <div class="col" >
+          <div class="card h-100 p-1" onmouseenter="setRandomColor() "  >
+              <div class="card-body pt-4">
+                  <img src="images/rhombus.png" class="card-img-top" alt="...">
+        
+              <h5 class="card-title text-center fw-bold pt-3" id="Rhombus-text">Rhombus</h5>
+              <p class="fs-6 text-center">Area (A) = 0.5 X d1 X d2</p>
+
+             <p class="text-center">d1=16cm  d2=8cm</p>
+            </div>
+            
+              <button class="btn btn-primary  rounded-3 my-3" type="button" id="Rhombus-btn">Calculate</button>
+
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 p-1" onmouseenter="setRandomColor() ">
+              <div class="card-body pt-4" >
+                  <img src="images/pentagon.png" class="card-img-top h-50" alt="...">
+        
+              <h5 class="card-title text-center fw-bold pt-3" id="pentagon-text">Pentagon</h5>
+              <p class="fs-6 text-center">Area (A) = 0.5 X p X b</p>
+
+             <p class="text-center">p = 6cm, b = 10cm</p>
+            </div>
+            
+              <button class="btn btn-primary w-100 rounded-3 my-3" type="button" id="pentagon-btn">Calculate</button>
+
+          </div>
+        </div>
+        <div class="col" >
+          <div class="card h-100 p-1" onmouseenter="setRandomColor() ">
+              <div class="card-body pt-5">
+              <img src="images/ellipse.png" class="card-img-top " alt="...">
+        
+              <h5 class="card-title text-center fw-bold pt-3" id="ellipse-text">Ellipse</h5>
+              <p class="fs-6 text-center">Area (A) = πab</p>
+
+             <p class="text-center">a = 10cm, b = 4cm</p>
+            </div>
+            
+              <button class="btn btn-primary w-100 rounded-3 my-3"  type="button" id="ellipse-btn">Calculate</button>
+
+          </div>
+        </div>
+       
+       
+       
+        
+     
+       
+      </div>
+    </div>
+    <div class="col-md-4">
+
+      <table class="table w-100">
+        <thead>
+      <p class="fw-bold text-center">Area Calculation</p>
+        </thead>
+        <tbody id="Tbody">
+          
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+
+
+
+<script src="random.js"></script>
+
+    <script src="calculate.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>
